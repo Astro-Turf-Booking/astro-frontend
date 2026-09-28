@@ -17,8 +17,8 @@ const zodiak = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "AstroZone — Good grounds. Great games.",
-  description: "Find your next football pitch. AstroZone connects players with local turfs and helps turf owners manage their pitches, availability, and bookings.",
+  title: "TurfZone — Good grounds. Great games.",
+  description: "Find your next football pitch. TurfZone connects players with local turfs and helps turf owners manage their pitches, availability, and bookings.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
