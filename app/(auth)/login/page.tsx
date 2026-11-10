@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
 import { AuthForm } from "../auth-form";
 
 export const metadata: Metadata = {
@@ -27,7 +28,9 @@ export default function LoginPage() {
       <section className="auth-panel" aria-labelledby="login-form-heading">
         <h2 id="login-form-heading">Log in to TurfZone</h2>
         <p className="auth-panel-description">A little closer to kick-off.</p>
-        <AuthForm mode="login" />
+        <Suspense fallback={<div className="auth-message">Loading form...</div>}>
+          <AuthForm mode="login" />
+        </Suspense>
         <p className="auth-switch">
           New to TurfZone? <Link href="/signup">Sign up</Link>
         </p>

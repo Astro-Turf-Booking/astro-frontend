@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import "goey-toast/styles.css";
 import "./globals.css";
+import { Toaster } from "./components/toaster";
 
 const jakarta = localFont({
   src: "../public/fonts/plus-jakarta-sans-regular.woff2",
@@ -27,7 +29,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${jakarta.variable} ${zodiak.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <Toaster />
+      </body>
     </html>
   );
 }

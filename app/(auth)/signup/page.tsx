@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
 import { AuthForm } from "../auth-form";
 
 export const metadata: Metadata = {
@@ -31,7 +32,9 @@ export default function SignupPage() {
         <p className="auth-panel-description">
           Let’s get you started with TurfZone.
         </p>
-        <AuthForm mode="signup" />
+        <Suspense fallback={<div className="auth-message">Loading form...</div>}>
+          <AuthForm mode="signup" />
+        </Suspense>
         <p className="auth-switch">
           Already part of the team? <Link href="/login">Log in</Link>
         </p>

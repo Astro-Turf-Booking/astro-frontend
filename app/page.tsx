@@ -12,6 +12,7 @@ export default function Home() {
       <header className="site-header wrap">
         <Brand />
         <nav aria-label="Main navigation">
+          <Link href="/home">Explore pitches</Link>
           <a href="#players">For players</a>
           <a href="#owners">For turf owners</a>
           <a href="#how-it-works">How it works</a>
@@ -44,9 +45,9 @@ export default function Home() {
               without the back-and-forth.
             </p>
             <div className="hero-actions">
-              <ActionButton kind="player" className="button button-green">
+              <Link href="/home" className="button button-green">
                 Find a pitch{" "}
-              </ActionButton>
+              </Link>
               <a className="text-link" href="#owners">
                 Own a turf? Let’s talk{" "}
               </a>
@@ -171,9 +172,9 @@ export default function Home() {
               No more calling around or chasing a reply. Find a pitch that fits
               your crew, pick your time, and get back to the good part.
             </p>
-            <ActionButton kind="player" className="text-link">
+            <Link href="/home" className="text-link">
               Find your next pitch{" "}
-            </ActionButton>
+            </Link>
             <div className="feature-pills">
               <span>Find your local turf</span>
               <span>Pick your time</span>
@@ -263,9 +264,9 @@ export default function Home() {
         <section className="closing wrap" data-reveal>
           <p className="eyebrow">THERE’S ALWAYS ROOM FOR ONE MORE GAME.</p>
           <h2>See you on the pitch.</h2>
-          <ActionButton kind="player" className="button button-green">
+          <Link href="/home" className="button button-green">
             Let’s play{" "}
-          </ActionButton>
+          </Link>
         </section>
       </main>
       <footer className="site-footer wrap">
