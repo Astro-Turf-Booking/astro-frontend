@@ -1,11 +1,16 @@
 import { LandingInteractions, ActionButton } from "./landing-interactions";
 import Link from "next/link";
 import { Brand } from "./components/brand";
+import Link from "next/link";
+import { Brand } from "./components/brand";
 
 export default function Home() {
   return (
     <>
       <LandingInteractions />
+      <a href="#main" className="skip-link">
+        Skip to content
+      </a>
       <a href="#main" className="skip-link">
         Skip to content
       </a>
@@ -68,7 +73,87 @@ export default function Home() {
               <span>THE GAME IS CALLING</span>
               <span>90&apos;</span>
             </div>
+          <div
+            className="hero-art"
+            role="img"
+            aria-label="Illustrated football pitch with a ball and a match invitation"
+          >
+            <div className="art-topline">
+              <span>THE GAME IS CALLING</span>
+              <span>90&apos;</span>
+            </div>
             <div className="pitch">
+              <div className="pitch-boundary">
+                <div className="halfway-line" />
+                <div className="center-circle" />
+                <div className="center-spot" />
+                <div className="penalty-area top">
+                  <i />
+                </div>
+                <div className="penalty-area bottom">
+                  <i />
+                </div>
+                <div className="goal top" />
+                <div className="goal bottom" />
+              </div>
+              <span className="player-dot player-one" />
+              <span className="player-dot player-two" />
+              <span className="player-dot player-three" />
+              <span className="player-dot player-four" />
+              <svg className="play-path" viewBox="0 0 300 300" fill="none">
+                <path
+                  d="M55 265C210 245 22 75 225 67"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeDasharray="7 8"
+                />
+                <path
+                  d="m213 53 18 14-18 14"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+              </svg>
+              <div className="football">
+                <svg viewBox="0 0 100 100">
+                  <defs>
+                    <radialGradient id="ballShade" cx="35%" cy="25%" r="80%">
+                      <stop stopColor="#fffef3" />
+                      <stop offset=".75" stopColor="#e7e6d9" />
+                      <stop offset="1" stopColor="#b3b5a5" />
+                    </radialGradient>
+                    <clipPath id="ballClip">
+                      <circle cx="50" cy="50" r="48" />
+                    </clipPath>
+                  </defs>
+                  <circle cx="50" cy="50" r="48" fill="url(#ballShade)" />
+                  <g
+                    clipPath="url(#ballClip)"
+                    stroke="#233c2c"
+                    strokeWidth="1.1"
+                  >
+                    <path d="m50 29 20 14-8 24H37l-8-24Z" fill="#233c2c" />
+                    <path
+                      d="m50 29-3-22M70 43l24-6M62 67l13 22M37 67 22 86M29 43 8 33"
+                      fill="none"
+                    />
+                    <path
+                      d="m30 0 17 7 17-8M94 19v18l10 14M88 95 75 89 62 102M9 96l13-10-9-19L0 71M0 16l8 17-9 17"
+                      fill="#233c2c"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div className="match-note">
+              <div>
+                Your next game?<small>Closer than you think.</small>
+              </div>
+            </div>
+            <div className="art-bottomline">
+              <span>
+                A LITTLE LESS SCROLL.
+                <br />A LOT MORE FOOTBALL.
+              </span>
               <div className="pitch-boundary">
                 <div className="halfway-line" />
                 <div className="center-circle" />
@@ -208,6 +293,31 @@ export default function Home() {
               </p>
             </article>
           </div>
+          <div className="steps-label">
+            <span className="eyebrow">HOW IT WORKS</span>
+            <span>Three steps. One good game.</span>
+          </div>
+          <div className="steps">
+            <article>
+              <span className="step-number">01</span>
+              <h3>Find your ground.</h3>
+              <p>
+                Explore football turfs by location and the way you like to play.
+              </p>
+            </article>
+            <article>
+              <span className="step-number">02</span>
+              <h3>Make it a date.</h3>
+              <p>Choose an available slot that works for you and your team.</p>
+            </article>
+            <article>
+              <span className="step-number">03</span>
+              <h3>Just bring your game.</h3>
+              <p>
+                Pitch sorted. Team assembled. All that’s left is the football.
+              </p>
+            </article>
+          </div>
         </section>
         <section id="owners" className="owner-section wrap" data-reveal>
           <div className="owner-copy">
@@ -269,6 +379,11 @@ export default function Home() {
           </Link>
         </section>
       </main>
+      <footer className="site-footer wrap">
+        <Brand />
+        <span>© {new Date().getFullYear()} TurfZone</span>
+        <a href="#">Back to top ↑</a>
+      </footer>
       <footer className="site-footer wrap">
         <Brand />
         <span>© {new Date().getFullYear()} TurfZone</span>
